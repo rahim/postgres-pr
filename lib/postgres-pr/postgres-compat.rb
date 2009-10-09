@@ -43,6 +43,10 @@ class PGconn
     str.gsub("'","''").gsub("\\", "\\\\\\\\")
   end
 
+  def self.quote_ident(name) 
+    %("#{name}") 
+  end
+
 end
 
 class PGresult
